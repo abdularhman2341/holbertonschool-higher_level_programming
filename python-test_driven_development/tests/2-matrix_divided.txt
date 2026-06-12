@@ -26,6 +26,16 @@ Test with a non-number div:
         ...
     TypeError: div must be a number
 
+Test with infinity as div:
+    >>> matrix_divided(matrix, float('inf'))
+    [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+Test with NaN as div:
+    >>> matrix_divided(matrix, float('nan'))
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
 Test with rows of different sizes:
     >>> matrix = [[1, 2, 3], [4, 5]]
     >>> matrix_divided(matrix, 3)

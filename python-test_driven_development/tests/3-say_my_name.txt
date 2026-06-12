@@ -13,6 +13,12 @@ Test with one string (default last name):
     >>> say_my_name("Bob")
     My name is Bob 
 
+Test with no arguments:
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
 Test with non-string first_name:
     >>> say_my_name(12, "White")
     Traceback (most recent call last):

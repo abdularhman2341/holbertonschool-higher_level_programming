@@ -31,3 +31,15 @@ It raises a TypeError if `a` or `b` are not integers or floats:
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+Test with infinity:
+    >>> add_integer(float('inf'), 2)
+    Traceback (most recent call last):
+        ...
+    OverflowError: cannot convert float infinity to integer
+
+Test with NaN:
+    >>> add_integer(float('nan'), 2)
+    Traceback (most recent call last):
+        ...
+    ValueError: cannot convert float NaN to integer
