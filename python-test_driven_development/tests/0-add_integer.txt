@@ -1,0 +1,33 @@
+======================================
+How to Use 0-add_integer.py
+======================================
+
+This module defines a function `add_integer(a, b=98)` that adds two integers.
+
+First, import the function:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now, let's test it with normal integers:
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(2)
+    100
+
+It also casts floats to integers before adding:
+    >>> add_integer(100.3, -2)
+    98
+
+It raises a TypeError if `a` or `b` are not integers or floats:
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
