@@ -14,6 +14,7 @@ Test with normal text:
     I am fine:
     <BLANKLINE>
     great.
+    <BLANKLINE>
 
 Test with extra spaces that should be ignored:
     >>> text_indentation("  Hello.   Spaces   ?  Yes:  ")
