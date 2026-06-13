@@ -9,14 +9,21 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
 
-    skip_space = True
-    for char in text:
-        if char == " " and skip_space:
+    i = 0
+    text_len = len(text)
+
+    
+    while i < text_len and text[i] == ' ':
+        i += 1
+
+    while i < text_len:
+        print(text[i], end="")
+        if text[i] == "\n" or text[i] in ".?:":
+            if text[i] in ".?:":
+                print("\n")
+            i += 1
+            
+            while i < text_len and text[i] == ' ':
+                i += 1
             continue
-
-        skip_space = False
-        print(char, end="")
-
-        if char in ".?:":
-            print("\n")
-            skip_space = True
+        i += 1
