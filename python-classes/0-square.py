@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-class Square:
+"""Module that defines a square."""
 
-pass
+
+class Square:
+    """An empty class that defines a square."""
+    pass
