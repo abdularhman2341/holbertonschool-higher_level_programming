@@ -9,8 +9,8 @@ class Square:
         """Initialize the square.
 
         Args:
-            size (int, optional): The size of the square. Defaults to 0.
-            position (tuple, optional): The coordinates of the square.
+            size (int): The size of the square.
+            position (tuple): The position of the square.
         """
         self.size = size
         self.position = position
@@ -50,13 +50,13 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Print the square with the '#' character at the specified position."""
-        if self.__size == 0:
-            print()
+        """Print the square with the '#' character at the position."""
+        if self.size == 0:
+            print("")
             return
 
-        for i in range(self.__position[1]):
-            print()
+        for i in range(self.position[1]):
+            print("")
 
-        for i in range(self.__size):
-            print(" " * self.__position[0] + "#" * self.__size)
+        for i in range(self.size):
+            print(" " * self.position[0] + "#" * self.size)
