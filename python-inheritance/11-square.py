@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that defines the Square class with a specific string representation."""
+"""Module that defines the Square class."""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
