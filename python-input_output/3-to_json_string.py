@@ -8,7 +8,7 @@ def to_json_string(my_obj):
 
     Args:
         my_obj: The object to be serialized.
-        
+
     Returns:
         str: The JSON string representation of the object.
     """

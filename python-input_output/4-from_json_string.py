@@ -8,7 +8,7 @@ def from_json_string(my_str):
 
     Args:
         my_str (str): The JSON string to be deserialized.
-        
+
     Returns:
         object: The Python object represented by the JSON string.
     """
