@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all cities belonging to a specified state."""
+"""Lists all cities belonging to a state supplied by the user."""
 
 import sys
 import MySQLdb
@@ -18,14 +18,15 @@ if __name__ == "__main__":
     cursor.execute(
         "SELECT cities.name "
         "FROM cities "
-        "INNER JOIN states ON cities.state_id = states.id "
-        "WHERE BINARY states.name = %s "
+        "INNER JOIN states "
+        "ON cities.state_id = states.id "
+        "WHERE states.name = %s "
         "ORDER BY cities.id ASC",
         (sys.argv[4],)
     )
 
-    cities = cursor.fetchall()
-    print(", ".join(city[0] for city in cities))
+    rows = cursor.fetchall()
+    print(", ".join(row[0] for row in rows))
 
     cursor.close()
     connection.close()
